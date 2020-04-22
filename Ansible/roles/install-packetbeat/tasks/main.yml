@@ -1,0 +1,20 @@
+---
+- name: install library
+  command: apt install libpcap0.8
+
+- name: download packetbeat
+  command: curl -L -O https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-7.6.2-amd64.deb
+
+- name: install packetbeat package
+  command: dpkg -i packetbeat-7.6.2-amd64.deb
+
+- name: drop in packetbeat config
+  copy:
+    src: packetbeat.yml
+    dest: /etc/packetbeat/packetbeat.yml
+
+- name: setup packet beat
+  command: packetbeat setup
+
+- name: start packet beat
+  command: service packetbeat start

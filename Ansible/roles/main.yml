@@ -1,0 +1,25 @@
+---
+- name: Setup Webservers
+  hosts: webservers
+  remote_user: luvbutrfly
+  become: True
+  roles:
+  - role: setup-webservers
+
+- name: Install Elk Server
+  hosts: elkservers
+  remote_user: luvbutrfly
+  become: True
+  roles:
+  - role: install-elk
+
+- name: Install Filebeat, Metricbeat, and all the beats!
+  hosts: webservers
+  remote_user: luvbutrfly
+  become: True
+  roles:
+  - role: install-filebeat
+  - role: install-metricbeat
+  - role: install-packetbeat
+  - role: install-auditbeat
+  - role: install-heartbeat

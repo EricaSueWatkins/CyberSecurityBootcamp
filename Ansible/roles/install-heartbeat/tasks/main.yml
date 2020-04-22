@@ -1,0 +1,17 @@
+---
+- name: download heartbeat
+  command: curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.6.2-amd64.deb
+
+- name: install heartbeat package
+  command: dpkg -i heartbeat-7.6.2-amd64.deb
+
+- name: drop in heartbeat config
+  copy:
+    src: heartbeat.yml
+    dest: /etc/heartbeat/heartbeat.yml
+
+- name: setup heart beat
+  command: heartbeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["10.0.0.4:9200"]'
+
+- name: start heart beat
+  command: service heartbeat-elastic start

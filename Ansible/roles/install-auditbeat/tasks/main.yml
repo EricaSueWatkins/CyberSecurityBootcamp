@@ -1,0 +1,20 @@
+---
+#- name: install library
+#  command: apt install libpcap0.8
+
+- name: download auditbeat
+  command: curl -L -O https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-6.0.1-amd64.deb
+
+- name: install auditbeat package
+  command: dpkg -i auditbeat-6.0.1-amd64.deb
+
+- name: drop in auditbeat config
+  copy:
+    src: auditbeat.yml
+    dest: /etc/auditbeat/auditbeat.yml
+
+- name: setup audit beat
+  command: auditbeat setup --dashboards
+
+- name: start audit beat
+  command: service auditbeat start
