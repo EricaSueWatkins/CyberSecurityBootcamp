@@ -115,25 +115,25 @@ The install-heartbeat playbook implements the following tasks:
 
 The following screenshots display the result of running `docker ps` after successfully configuring the ELK instance.
 
-####Webservers Playbook Output
+#### Webservers Playbook Output
 ![Setup webservers playbook output](images/webserverplaybook.png)
 
-####Install Elk Playbook Output
+#### Install Elk Playbook Output
 ![Install elk playbook output](images/installelkplaybook.png)
 
-####Install Filebeat Playbook Output
+#### Install Filebeat Playbook Output
 ![Install filebeat playbook output](images/installfilebeatplaybook.png)
 
-####Install Metricbeat Playbook Output
+#### Install Metricbeat Playbook Output
 ![Install metricbeat playbook output](images/installmetricbeatplaybook.png)
 
-####Install Packetbeat Playbook Output
+#### Install Packetbeat Playbook Output
 ![Install packetbeat playbook output](images/installpacketbeatplaybook.png)
 
-####Install Auditbeat Playbook Output
+#### Install Auditbeat Playbook Output
 ![Install auditbeat playbook output](images/installauditbeatplaybook.png)
 
-####Install Heartbeat Playbook Output
+#### Install Heartbeat Playbook Output
 ![Install heartbeat playbook output](images/installheartbeatplaybook.png)
 
 ### Target Machines & Beats
