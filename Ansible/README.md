@@ -4,7 +4,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![Azure topology](images/topology.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the main.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
+
+Alternatively, select portions of the main.yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - _roles/main.yml_
 
@@ -52,7 +54,9 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it increases accuracy, by eliminating human error in retyping commands and it saves time. Roles were also utilized to increase re-usability. A main.yml file references the main.yml within each ansible role to run each playbook with one command. The main file can easily be edited to add or remove roles and therefore which playbooks are run.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it increases accuracy, by eliminating human error in retyping commands and it saves time.
+
+Roles were also utilized to increase re-usability. A main.yml file references the main.yml within each ansible role to run each playbook with one command. The main file can easily be edited to add or remove roles and therefore which playbooks are run.
 
 The main playbook implements the following roles, which then implement the individual playbooks listed below:
 - Setup Webservers
