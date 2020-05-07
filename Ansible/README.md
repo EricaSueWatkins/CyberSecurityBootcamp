@@ -52,7 +52,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it increases accuracy, be eliminating human error in retyping commands and saves time. Roles were also utilized to increase re-usability. A main.yml file references the main.yml within each ansible role to run each playbook with one command. The main file can easily be edited to add or remove roles and therefore which playbooks are run.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it increases accuracy, by eliminating human error in retyping commands and it saves time. Roles were also utilized to increase re-usability. A main.yml file references the main.yml within each ansible role to run each playbook with one command. The main file can easily be edited to add or remove roles and therefore which playbooks are run.
 
 The main playbook implements the following roles, which then implement the individual playbooks listed below:
 - Setup Webservers
@@ -113,7 +113,7 @@ The install-heartbeat playbook implements the following tasks:
 - Setup heartbeat
 - Start heartbeat service
 
-The following screenshots display the result of running `docker ps` after successfully configuring the ELK instance.
+The following screenshots display the results of running `docker ps` after successfully configuring the ELK instance.
 
 #### Webservers Playbook Output
 ![Setup webservers playbook output](images/webserverplaybook.png)
