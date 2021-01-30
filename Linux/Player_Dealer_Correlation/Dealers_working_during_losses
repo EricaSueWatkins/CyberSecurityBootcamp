@@ -1,0 +1,22 @@
+0310_Dealer_schedule
+05:00:00 AM Billy Jones
+08:00:00 AM Billy Jones
+02:00:00 PM Billy Jones
+08:00:00 PM Billy Jones
+11:00:00 PM Billy Jones
+0312_Dealer_schedule
+05:00:00 AM Billy Jones
+08:00:00 AM Billy Jones
+02:00:00 PM Billy Jones
+08:00:00 PM Billy Jones
+11:00:00 PM Billy Jones
+0315_Dealer_schedule
+05:00:00 AM Billy Jones
+08:00:00 AM Billy Jones
+02:00:00 PM Billy Jones
+
+The dealer working during all the days/times of losses is Billy Jones.
+
+grep "Billy" Dealers_working_during_losses | wc -l >> Dealers_working_during_losses
+
+13

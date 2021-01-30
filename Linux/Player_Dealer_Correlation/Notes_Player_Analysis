@@ -1,0 +1,9 @@
+3/10 5AM, 8AM, 2PM, 8PM, 11PM
+3/12 5AM, 8AM, 2PM, 8PM, 11PM
+3/15 5AM, 8AM, 2PM
+
+Mylie Schmidt was working all day/times.
+
+grep -i "mylie" Roulette_Losses | wc -l >> Notes_Player_Analysis
+
+13
